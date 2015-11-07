@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<TITLE>Alphabetizer</TITLE>
+
+<!-- saved from url=(0030)http://www.sciencebuddies.org/ -->
+<!-- When this code is saved as a local file, the preceding line tells Internet Explorer to treat this file according to the security rules for the Internet zone (plus any security rules specific for the Science Buddies website). -->
+<SCRIPT LANGUAGE="JavaScript">
+<!-- old browsers can't handle JavaScript functions so comment them out
+// This is a single-line JavaScript comment.
+// Below is a multi-line JavaScript comment.
+
+function AlphabetizeWords(form)
+{
+var s = form.inputText.value;
+var arr = s.split(" ");
+arr.sort();
+var str = arr.join(" ");
+form.outputText.value = str;
+}
+
+function ReverseWords(form)
+{
+var s = form.inputText.value;
+var arr = s.split(" ");
+arr.sort();
+arr.reverse();
+var str = arr.join(" ");
+form.outputText.value = str;
+}
+
+/* ClearForm: this function has 1 argument: form.
+   It clears the input and output fields on the form. 
+   It needs to know the names of the INPUT elements in order
+   to do this. */
+
+function ClearForm(form)
+{
+form.inputText.value = "";
+form.outputText.value = "";
+}
+
+// end of JavaScript functions -->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<P><FONT SIZE="+2">Alphabetizer</FONT></P>
+
+<FORM NAME="Alphabetizer" METHOD="post">
+<TEXTAREA name="inputText" rows=5 cols=80 wrap=on></TEXTAREA>
+<P><INPUT TYPE="button" VALUE="Alphabetize Words" name="AlphaButton" onClick="AlphabetizeWords(this.form)">
+<INPUT TYPE="button" VALUE="Reverse Alphabetize Words" name="ReverseButton" onClick="ReverseWords(this.form)">
+<INPUT TYPE="button" VALUE="Clear Lists" name="ClearButton" onClick="ClearForm(this.form)"></P>
+<TEXTAREA name="outputText" rows=5 cols=80 wrap=on readonly></TEXTAREA>
+</FORM>
+
+</BODY>
+</HTML>
